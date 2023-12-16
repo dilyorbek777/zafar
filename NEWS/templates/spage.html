@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Zafar Biz Haqimizda {% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/spage.css' %}">
+
+<div class="showcase">
+    <p class="title">
+        Our Shop
+    </p>
+</div>
+<div class="pages">
+    <div class="page">
+        <div class="page_one">
+            <img src="{{food.image.url}}" alt="">
+        </div>
+        <div class="page_two">
+            <button>In stock</button>
+            <p class="title" style="color: aliceblue;">
+
+                {{food.name}}
+            </p>
+            <p class="info" style="color: aliceblue;">
+                {{food.text}}
+            </p>
+            <hr>
+            <p class="price" style="color: aliceblue;">
+                {{food.price}}$
+            </p>
+            <p class="menu" style="color: aliceblue;">
+                food/{{food.slug}}
+            </p>
+            <hr>
+            <div class="share">
+                <p class="are">
+                    Share :
+                </p>
+                <div class="images">
+                    <img src="{% static 'assets/media/images/youtube.svg' %}" alt="">
+                    <img src="{% static 'assets/media/images/bx_bxl-facebook-circle.svg' %}" alt="">
+                    <img src="{% static 'assets/media/images/entypo-social_twitter-with-circle.svg' %}" alt="">
+                    <img src="{% static 'assets/media/images/bx_bxl-instagram-alt.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="description">
+    <div class="buttons">
+        <button>
+            Description
+        </button>
+       
+    </div>
+    <p class="info">
+        {{food.text}}
+    </p>
+    <p class="title">
+        Key Benefits
+    </p>
+    <ul class="list">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </li>
+        <li>
+            Maecenas ullamcorper est et massa mattis condimentum.
+
+        </li>
+        <li>
+            Vestibulum sed massa vel ipsum imperdiet malesuada id tempus nisl.
+
+        </li>
+        <li>
+            Etiam nec massa et lectus faucibus ornare congue in nunc.
+
+        </li>
+        <li>
+            Mauris eget diam magna, in blandit turpis.
+        </li>
+    </ul>
+</div>
+<div class="card_pages">
+    <p class="titler" style="color: aliceblue;">
+        Similar Products
+    </p>
+    <div class="card_page">
+        {% for fd in foods%}
+        <a href="/food/{{fd.slug}}" class="card_one">
+            <img src="{{fd.image.url}}" alt="">
+            <p class="title">
+                {{fd.title}}
+            </p>
+            <p class="info">
+                ${{fd.price}}
+            </p>
+        </a>
+        {%endfor%}
+       
+    </div>
+</div>
+
+{% endblock content %}

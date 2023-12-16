@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Zafar | shop {% endblock title %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'assets/css/card.css' %}">
+
+<div class="showcase">
+    <p class="title">
+        Our Shop
+    </p>
+</div>
+<header class="header">
+    <div class="filter">
+        <button class="button button_all" data-filter="all">Barchasi</button>
+        <button class="button button_clothing" data-filter="taomlar">Taomlar</button>
+        <button class="button button_decor" data-filter="saladlar">Saladlar</button>
+        <button class="button button_bags" data-filter="shirinliklar">Shirinliklar</button>
+        <button class="button button_bags" data-filter="ichimliklar">Ichimliklar</button>
+    </div>
+</header>
+<main class="content">
+    <div class="container ">
+
+        {%for food in foods%}
+        <div class="card ">
+            <img src="{{food.image.url}}" alt="">
+            <p class="title" style="color: aliceblue;">
+                {{food.name}}
+            </p>
+            <p class="info">
+                ${{food.price}}
+            </p>
+
+        </div>
+        {%endfor %}
+        <!-- <div class="card ">
+            <img src="{% static 'assets/media/images/img3.jpg' %}" alt="">
+            <p class="title">
+                Fresh Lime
+            </p>
+            <p class="info">
+                $38.00
+            </p>
+        </div>
+
+        <div class="card ">
+            <img src="{% static 'assets/media/images/img3.jpg' %}" alt="">
+            <p class="title">
+                Fresh Lime
+            </p>
+            <p class="info">
+                $38.00
+            </p>
+        </div>
+        <div class="card ">
+            <img src="{% static 'assets/media/images/img3.jpg' %}" alt="">
+            <p class="title">
+                Fresh Lime
+            </p>
+            <p class="info">
+                $38.00
+            </p>
+        </div>
+        <div class="card ">
+            <img src="{% static 'assets/media/images/img3.jpg' %}" alt="">
+            <p class="title">
+                Fresh Lime
+            </p>
+            <p class="info">
+                $38.00
+            </p>
+        </div>
+        <div class="card ">
+            <img src="{% static 'assets/media/images/img3.jpg' %}" alt="">
+            <p class="title">
+                Fresh Lime
+            </p>
+            <p class="info">
+                $38.00
+            </p>
+        </div> -->
+
+
+    </div>
+</main>
+<script src="{% static 'assets/js/script.js' %}"></script>
+
+{% endblock content %}

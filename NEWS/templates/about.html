@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Zafar Biz Haqimizda {% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/team.css' %}">
+
+<div class="story">
+    <p class="title">
+        Biz haqimizda hikoya
+    </p>
+</div>
+<hr>
+<br>
+
+<div class="team">
+   {% for food in foods%}
+   <div class="left">
+    <img src="{{food.image.url}}" alt="">
+</div>
+<div class="right">
+    <p class="title">
+        {{food.name}}
+    </p>
+    <p class="info">
+        It's always been a dream to bring Uzbek food to the heart of London, it's the perfect place for our
+        first standalone site. Our journey in the United Kingdom has gone from strength to strength, and we
+        can't wait to showcase OshPaz's food and unique flavours to everyone.
+    </p>
+</div>
+   {% endfor%}
+
+</div>
+{% endblock content %}

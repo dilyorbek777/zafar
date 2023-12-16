@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'assets/css/index.css' %}">
+
+
+</head>
+
+<body onmousemove="load()">
+    <div class="container">
+        <div class="back">
+            <nav>
+                <div class="logo">
+                    <p class="title">
+                        Zafar
+                    </p>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'menu' %}">Menu</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'about' %}">About</a>
+                    </li>
+                    <li>
+                        <a href="#Team">Chef</a>
+                    </li>
+                    <li>
+                        <a href="#Contact">Contact</a>
+                    </li>
+                    <li>
+                        <span id="google_translate_element"></span>
+                    </li>
+    
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({ pageLanguage: 'uz' }, 'google_translate_element');
+                        }
+                    </script>
+    
+                    <script type="text/javascript"
+                        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </ul>
+                <div class="hel">
+                    <a class="one" href="tel+998904583808">+998904583808</a>
+                    <a href=""><i id="two" class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i id="three" class="fa-brands fa-facebook"></i></a>
+                    <a href=""><img class="four" src="{% static 'assets/media/images/instagram.svg' %}" alt=""></a>
+
+                </div>
+            </nav>
+
+
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+
+        <footer>
+            <div class="footer">
+                <p>Copyright © 2023 by Dilbek. All Rights Reserved.</p>
+                <img src="{% static 'assets/media/images/Sociali icon.png' %}" alt="">
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        function load() {
+            const ret = document.querySelectorAll("select.goog-te-combo option")
+            console.log(ret);
+            ret.forEach((element,i) => {
+                console.log(element,i);
+            });
+            console.log(
+            );
+
+            document.querySelector("select.goog-te-combo").innerHTML=``
+            document.querySelector("select.goog-te-combo").innerHTML=`
+            <option value="Tilni tanlash">Tilni tanlash</option>
+            <option value="uz">узбекский</option>
+            <option value="en">английский</option>
+            <option value="ru">русский</option>
+
+            `
+            document.querySelector(".translated-ltr").classList=``
+        }
+
+        function rte() {
+            const ret = document.querySelectorAll("select.goog-te-combo option")
+            console.log(ret);
+            ret.forEach((element) => {
+                console.log(element);
+            });
+        }
+    </script>
+</body>
+
+</html>

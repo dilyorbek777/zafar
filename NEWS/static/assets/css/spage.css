@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.auto{
+    max-width: 1440px;
+    height: auto;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #0d0d0d;
+    box-sizing: border-box;
+}
+nav .logo{
+    width: 28%;
+}
+.logo p.title{
+    color: #F67600;
+font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+}
+nav .links {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    
+    list-style: none;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #FFF;
+
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.links li a:hover{
+    color: #FF9F0D;
+}
+nav .hel{
+    width: 28%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hel #two{
+    color: red;
+    
+    
+}
+.hel #three{
+    color: blue;
+    
+}
+.hel .four{
+    width: 20px;
+    height: 20px;
+}
+
+.showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 310px;
+    background-image: url('./images/rubbish.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px;
+}
+
+.showcase p.title {
+    color: var(--fffffff, #FFF);
+    font-kerning: none;
+
+    font-family: Helvetica;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+.pages {
+    width: 100%;
+    height: auto;
+    /*  */
+}
+
+.page {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 55px;
+    box-sizing: border-box;
+}
+
+.page_one {
+    width: 40%;
+
+}
+
+.page_one img {
+
+    width: 491px;
+    height: 596px;
+}
+
+.page_two {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.page_two button {
+    width: 86px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--Primary-color, #FF9F0D);
+    color: var(--fffffff, #FFF);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+}
+
+.page_two p.title {
+    color: var(--Gray-1, #333);
+    font-kerning: none;
+    /* Headingt 2/48 */
+    font-family: Helvetica;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+.page_two p.info {
+    color: #fff;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.page_two p.price {
+    color: var(--Gray-1, #333);
+    /* Heading 4/32 */
+    font-family: Helvetica;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 25px;
+}
+
+.page_two .menu {
+    color: var(--Gray-1, #333);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.share {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.images {
+    width: 70%;
+    display: flex;
+    gap: 18px;
+}
+
+.description {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    
+    gap: 32px;
+}
+
+.description .buttons {
+    width: 50%;
+}
+
+.buttons button {
+    width: 165px;
+    height: 50px;
+    flex-shrink: 0;
+    background: var(--Primary-color, #FF9F0D);
+    color: #FFF;
+    /* Normal Text Regular/16 */
+    font-family: Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+}
+
+.buttons button:nth-child(2) {
+    color: var(--Gray-1, #333);
+    /* Normal Text Regular/16 */
+    font-family: Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    background: transparent;
+}
+
+.description p.info {
+    color: var(--Gray-3, #828282);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.description p.title {
+    color: var(--Gray-2, #4F4F4F);
+    /* Medium Text Regular/18 */
+    font-family: Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+.list{
+    padding-left: 20px;
+}
+.list li {
+    color: var(--Gray-2, #4F4F4F);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+  
+}
+.card_pages{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.card_pages p.titler{
+    color: var(--Gray-1, #333);
+/* Heading 4/32 */
+font-family: Helvetica;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px;
+margin-bottom: 32px;
+}
+.card_page{
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card_page .card_one{
+    width: 312px;
+    height: 330px;
+    line-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+.card_one p.title{
+    color: var(--Gray-1, #333);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+margin: 0;
+}
+.card_one p.info{
+    color: var(--Primary-color, #FF9F0D);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+}
+.card_one img{
+    width: 312px;
+height: 267px;
+}
+footer {
+    width: 100%;
+    background-color: var(--Gray-2, #4F4F4F);
+
+    height: 100px;
+    margin-top: 60px;
+}
+
+.footer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.footer p {
+    color: var(--fffffff, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
